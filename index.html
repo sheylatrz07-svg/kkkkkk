@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 meses contigo ♡</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, 'Times New Roman', serif;
+        background: #fff7f8;
+        color: #4a3036;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .screen {
+        min-height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 22px;
+        text-align: center;
+        animation: aparecer .7s ease;
+    }
+
+    .screen.active {
+        display: flex;
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* PORTADA */
+
+    .tiny {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #b88c96;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 42px;
+        font-weight: normal;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 320px;
+        color: #765961;
+        margin-bottom: 35px;
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        font-family: Georgia, serif;
+    }
+
+    .main-btn {
+        background: #8f5967;
+        color: white;
+        padding: 14px 30px;
+        border-radius: 30px;
+        font-size: 15px;
+        box-shadow: 0 8px 20px rgba(100, 55, 65, .15);
+        transition: .3s;
+    }
+
+    .main-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    /* MENÚ */
+
+    .menu-title {
+        font-size: 31px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .menu-subtitle {
+        color: #866b72;
+        margin-bottom: 35px;
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 390px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #f0dfe3;
+        border-radius: 20px;
+        padding: 25px 12px;
+        color: #553941;
+        box-shadow: 0 5px 18px rgba(100, 55, 65, .06);
+        transition: .3s;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .heart {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .number {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: #b28a94;
+        margin-bottom: 7px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    /* CONTENIDO */
+
+    .content {
+        max-width: 430px;
+    }
+
+    .big-number {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 5px;
+        color: #b88c96;
+        margin-bottom: 20px;
+    }
+
+    .content h2 {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 25px;
+    }
+
+    .content p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #684e55;
+    }
+
+    .quote {
+        margin-top: 30px;
+        padding: 20px;
+        border-top: 1px solid #ead5da;
+        border-bottom: 1px solid #ead5da;
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .back {
+        margin-top: 35px;
+        background: transparent;
+        color: #9a6b77;
+        font-size: 14px;
+        text-decoration: underline;
+    }
+
+    /* FINAL */
+
+    .final-heart {
+        font-size: 45px;
+        margin-bottom: 20px;
+        animation: latido 1.5s infinite;
+    }
+
+    @keyframes latido {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+    }
+
+    .final h2 {
+        font-size: 38px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .final p {
+        max-width: 330px;
+        font-size: 17px;
+        line-height: 1.8;
+        color: #6d555c;
+    }
+
+    .signature {
+        margin-top: 35px;
+        font-style: italic;
+        color: #9a6b77;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+
+<section id="inicio" class="screen active">
+
+    <div class="tiny">05 · 10 · 2026</div>
+
+    <h1>5 meses<br>contigo ♡</h1>
+
+    <p class="subtitle">
+        Hay muchas cosas que amo de nosotros,
+        pero hoy quiero contarte cinco.
+    </p>
+
+    <button class="main-btn" onclick="mostrar('menu')">
+        Abrir →
+    </button>
+
+</section>
+
+
+<!-- MENÚ -->
+
+<section id="menu" class="screen">
+
+    <div class="tiny">para nosotros</div>
+
+    <h2 class="menu-title">5 cosas que amo</h2>
+
+    <p class="menu-subtitle">
+        Elegí una ♡
+    </p>
+
+    <div class="cards">
+
+        <button class="card" onclick="mostrar('uno')">
+            <div class="heart">♡</div>
+            <div class="number">01</div>
+            <div class="card-title">Nuestra forma de querernos</div>
+        </button>
+
+        <button class="card" onclick="mostrar('dos')">
+            <div class="heart">♡</div>
+            <div class="number">02</div>
+            <div class="card-title">Las cosas pequeñas</div>
+        </button>
+
+        <button class="card" onclick="mostrar('tres')">
+            <div class="heart">♡</div>
+            <div class="number">03</div>
+            <div class="card-title">La confianza</div>
+        </button>
+
+        <button class="card" onclick="mostrar('cuatro')">
+            <div class="heart">♡</div>
+            <div class="number">04</div>
+            <div class="card-title">Crecer juntos</div>
+        </button>
+
+        <button class="card" onclick="mostrar('cinco')">
+            <div class="heart">♡</div>
+            <div class="number">05</div>
+            <div class="card-title">Vos</div>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- COSA 1 -->
+
+<section id="uno" class="screen">
+
+    <div class="content">
+
+        <div class="big-number">01 · 05</div>
+
+        <h2>Nuestra forma de querernos</h2>
+
+        <p>
+            Ejemplo de texto aquí. Esta parte después
+            la vamos a escribir completamente con
+            tus palabras y tus recuerdos.
+        </p>
+
+        <div class="quote">
+            “Me gusta la forma en que nos queremos,
+            incluso en esas pequeñas cosas que quizás
+            nadie más nota.”
+        </div>
+
+        <button class="back" onclick="mostrar('menu')">
+            ← volver a las 5 cosas
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- COSA 2 -->
+
+<section id="dos" class="screen">
+
+    <div class="content">
+
+        <div class="big-number">02 · 05</div>
+
+        <h2>Las cosas pequeñas</h2>
+
+        <p>
+            Porque a veces un mensaje, una mirada,
+            una preocupación o un pequeño detalle
+            puede significar muchísimo.
+        </p>
+
+        <div class="quote">
+            “Amo que contigo las cosas mínimas
+            nunca se sienten mínimas.”
+        </div>
+
+        <button class="back" onclick="mostrar('menu')">
+            ← volver a las 5 cosas
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- COSA 3 -->
+
+<section id="tres" class="screen">
+
+    <div class="content">
+
+        <div class="big-number">03 · 05</div>
+
+        <h2>La confianza</h2>
+
+        <p>
+            Cinco meses llenos de conversaciones,
+            momentos, risas y también cosas que
+            hemos aprendido a entender juntos.
+        </p>
+
+        <div class="quote">
+            “Me gusta saber que puedo ser yo misma
+            cuando estoy contigo.”
+        </div>
+
+        <button class="back" onclick="mostrar('menu')">
+            ← volver a las 5 cosas
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- COSA 4 -->
+
+<section id="cuatro" class="screen">
+
+    <div class="content">
+
+        <div class="big-number">04 · 05</div>
+
+        <h2>Crecer juntos</h2>
+
+        <p>
+            No porque todo sea perfecto,
+            sino porque cada día aprendemos
+            un poquito más del otro.
+        </p>
+
+        <div class="quote">
+            “No quiero una historia perfecta.
+            Quiero una historia real que sigamos
+            construyendo.”
+        </div>
+
+        <button class="back" onclick="mostrar('menu')">
+            ← volver a las 5 cosas
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- COSA 5 -->
+
+<section id="cinco" class="screen">
+
+    <div class="content">
+
+        <div class="big-number">05 · 05</div>
+
+        <h2>Vos</h2>
+
+        <p>
+            Porque después de todo, detrás de cada
+            recuerdo de estos cinco meses estás vos:
+            la persona que llegó a mi vida y terminó
+            siendo alguien demasiado importante para mí.
+        </p>
+
+        <div class="quote">
+            “Y si tuviera que elegir una sola cosa,
+            probablemente siempre terminaría
+            eligiéndote a vos.”
+        </div>
+
+        <button class="main-btn" onclick="mostrar('final')">
+            Última página ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section id="final" class="screen final">
+
+    <div class="final-heart">♡</div>
+
+    <h2>5 meses.</h2>
+
+    <p>
+        Y todavía me hace ilusión pensar
+        en todo lo que nos queda por vivir,
+        conocer y recordar.
+    </p>
+
+    <div class="signature">
+        Con amor,<br>
+        Sheyla
+    </div>
+
+</section>
+
+
+<script>
+
+function mostrar(id) {
+
+    document.querySelectorAll('.screen').forEach(function(pantalla) {
+        pantalla.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+</script>
+
+</body>
+</html>
